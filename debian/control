@@ -1,0 +1,11 @@
+Source: tw5864
+Section: kernel
+Priority: optional
+Maintainer: Bluecherry <maintainers@bluecherrydvr.com>
+Build-Depends: debhelper (>= 9), cdbs, linux-headers (>= 4.2), linux-image (>= 4.2)
+
+Package: tw5864-dkms
+Architecture: all
+Depends: dkms, make, gcc
+Breaks: bluecherry (<< 2.5.18)
+Description: TW5864 Video4Linux H.264 multimedia grabber driver

@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+# Copyright (C) 2011-2015 Bluecherry, LLC www.bluecherrydvr.com
+# Copyright (C) 2009 Alberto Milone
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+DRIVER_NAME := tw5864
+
+ver-regex = 's/^[^(]*(//;s/[^0-9.].*//;q'
+VERSION := $(shell sed $(ver-regex) debian/changelog)
+PKG  := $(DRIVER_NAME)-dkms
+GEN_FILES := dkms.conf $(PKG).install
+
+configure/$(PKG)::
+	for i in $(addprefix debian/,$(GEN_FILES)); do	\
+		sed -e "s|#VERSION#|$(VERSION)|"	\
+			$$i.in > $$i;	\
+	done
+
+clean::
+	rm -f $(addprefix  debian/,$(GEN_FILES))
+
+override_dh_builddeb:
+	dh_builddeb -- -Zgzip

@@ -1,0 +1,3 @@
+*.[ch]			usr/src/tw5864-#VERSION#
+Makefile		usr/src/tw5864-#VERSION#
+debian/dkms.conf	usr/src/tw5864-#VERSION#
