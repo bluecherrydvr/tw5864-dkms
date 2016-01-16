@@ -8,4 +8,4 @@ To build a package:
 
 In other words:
 
-```cd /usr/local/src/linux/drivers/staging/media/tw5864 && cp /usr/local/src/tw5864-dkms/* . && ./build_deb.sh```
+```cd /usr/local/src/linux/drivers/staging/media/tw5864 && cp -r /usr/local/src/tw5864-dkms/* . && ./build_deb.sh```
