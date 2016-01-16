@@ -1,3 +1,11 @@
+tw5864 (1.7) unstable; urgency=low
+
+  * Stability & flexibility enhancements
+  * Added V4L2 framerate (timeperframe) control
+  * Changed H264 encoder parameters to simplify its mode, which resulted in less (no?) decoding errors
+
+ -- Andrey Utkin <andrey.utkin@corp.bluecherry.net>  Fri, 2 Jan 2015 00:00:00 +0000
+
 tw5864 (1.6) unstable; urgency=low
 
   * Massive housekeeping + add V4L2 settings
